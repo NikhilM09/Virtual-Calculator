@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/51c96d909a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="layout">
+        <div class="header">
+        <p class="tag">Virtual Calculator</p>
+        <a href="#"><i class="fa-solid fa-clock-rotate-left history" onclick="showHideHistory()"></i></a>
+        <a href="#"><i class="fa-solid fa-power-off switch" style="float:left;margin-left:10px;" onclick="onOff()"></i></a>
+        </div>
+        <div class="userinput">
+            <input type="text" id="equation" readonly><br>
+            <input type="text" id="input" value="">
+        </div><br>
+        <div class="main">
+            <div class="fixed">
+                <button onclick="clearHistory()" class="del">
+                <i class="fa-solid fa-trash" style="font-size:20px;color:white"></i>
+            </button>
+            </div>
+            <div class="historybox"></div>
+        </div>
+        <div class="keypad">
+        <input type="button" value="9" onclick="getNum('9')" class="number">
+        <input type="button" value="8" onclick="getNum('8')" class="number">
+        <input type="button" value="7" onclick="getNum('7')" class="number">
+        <input type="button" value="CLR" onclick="backspace()" class="operation"><br><br>
+        <input type="button" value="6" onclick="getNum('6')" class="number">
+        <input type="button" value="5" onclick="getNum('5')" class="number">
+        <input type="button" value="4" onclick="getNum('4')" class="number">
+        <input type="button" value="+" onclick="getNum('+')" class="operation"><br><br>
+        <input type="button" value="3" onclick="getNum('3')" class="number">
+        <input type="button" value="2" onclick="getNum('2')" class="number">
+        <input type="button" value="1" onclick="getNum('1')" class="number">
+        <input type="button" value="-" onclick="getNum('-')" class="operation"><br><br>
+        <input type="button" value="0" onclick="getNum('0')" class="number">
+        <input type="button" value="00" onclick="getNum('00')" class="number">
+        <input type="button" value="/" onclick="getNum('/')" class="operation">
+        <input type="button" value="x" onclick="getNum('*')" class="operation"><br><br>
+        <input type="button" value="=" onclick="answer()" style="float:left" class="answer">
+        <input type="button" value="C" onclick="reset()" style="float:right" class="answer"><br>
+        <br>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
